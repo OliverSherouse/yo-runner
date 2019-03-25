@@ -1,0 +1,8 @@
+vars:
+  docdir: docs
+  docbuilddir: docs/_build
+build-docs: sphinx-build {docdir} {docbuilddir}
+test: pytest
+docs:
+  - build-docs
+  - python -m http.server --directory {docbuilddir}

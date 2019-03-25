@@ -1,0 +1,8 @@
+foo: python -c "print('hello, world')"
+bar:
+  - python -c "print('hi')"
+  - python -c "print('there')"
+baz_c:
+  - python -m http.server 8555
+  - python -m http.server 8556
+  - bar
