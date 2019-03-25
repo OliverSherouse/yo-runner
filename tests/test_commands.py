@@ -3,8 +3,6 @@ import time
 import urllib.request
 import urllib.error
 
-import pytest
-
 from pathlib import Path
 
 yofile_dir = Path(__file__).parent.joinpath("yofiles")
