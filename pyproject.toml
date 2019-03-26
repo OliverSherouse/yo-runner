@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "yo-runner"
-version = "0.1.0.dev"
+version = "0.1.0"
 description = "A YAML-driven task runner for lazy people"
 authors = ["Oliver Sherouse <oliver@oliversherouse.com>"]
 license = "GPL-2.0+"
