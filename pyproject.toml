@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "yo-runner"
+version = "0.1.0.dev"
+description = "A YAML-driven task runner for lazy people"
+authors = ["Oliver Sherouse <oliver@oliversherouse.com>"]
+license = "GPL-2.0+"
+readme = "README.md"
+homepage = "https://github.com/OliverSherouse/yo-runner"
+repository = "https://github.com/OliverSherouse/yo-runner"
+keywords = ["build", "task", "runner"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Utilities",
+    "Topic :: Software Development :: Build Tools"
+]
+packages = [{include = "yo.py"}]
+
+[tool.poetry.dependencies]
+python = "^3.4"
+pyyaml = "^5.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+pytest-flake8 = "^1.0"
+Sphinx = "^1.8"
+recommonmark = "^0.5.0"
+
+[tool.poetry.scripts]
+yo = "yo:main"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

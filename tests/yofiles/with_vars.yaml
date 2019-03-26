@@ -1,0 +1,3 @@
+vars:
+  foo: bar
+print: python -c "print({foo})"

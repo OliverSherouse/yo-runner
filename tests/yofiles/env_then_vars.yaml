@@ -1,0 +1,5 @@
+env:
+  greeting: hello
+vars:
+  myname: world
+print: python -c "import os; print(os.envirion['greeting'] + ' {myname}')"

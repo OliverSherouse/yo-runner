@@ -1,4 +1,4 @@
-# Yo-Runner
+# Welcome to yo-runner's documentation\!
 
 Yo is a Yaml-based task runner for lazy people. When you're coding, you may
 often need to run a long command many times, but you don't want to do all that
@@ -11,7 +11,7 @@ want is something like directory-specific aliases.
 That's where yo comes in. All you do is write a `yo.yaml` that looks something
 like this:
 
-``` {.yaml}
+``` yaml
 run: poetry run flask run
 serve-docs: python -m http.server --directory docs/_build
 docs: 
@@ -28,7 +28,29 @@ any arguments you pass to the `yo` command will be passed through the task.
 Yo can handle single commands, sequential lists, and concurrent lists. Every
 command is run on the shell, so pipes and redirects work. There's also support
 for environment variables and variables internal to the `yo.yaml` so that you
-don't have to type paths more than once. It's lazy all the way down.
+don't have to type paths more than once. It's lazy all the way down. See
+[Usage](usage.md) for more information on how to do all of this.
 
-See the full documentation for yo at
-<https://OliverSherouse.github.io/yo-runner>.
+### Similar projects
+
+  - Sort of close to what Yo does:
+      - [Make](https://www.gnu.org/software/make/), if you use `.PHONY` and
+        generally don't worry about dependencies
+      - [Just](https://github.com/casey/just), probably the closest thing, aims
+        to be a less annoying Make
+      - NPM, Poetry, probably a bunch of other frameworks have something built
+        in that I'm too lazy to learn
+  - More heavy-duty:
+      - [Gulp](https://gulpjs.com/)
+      - [Grunt](https://gruntjs.com/)
+
+## Contents
+
+  - [Usage](usage.md)
+  - [API](api.md)
+
+## Indices and tables
+
+  - [genindex](genindex)
+  - [modindex](modindex)
+  - [search](search)
