@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "yo-runner"
-version = "0.1.0.dev"
+version = "0.1.1.dev"
 description = "A YAML-driven task runner for lazy people"
 authors = ["Oliver Sherouse <oliver@oliversherouse.com>"]
 license = "GPL-2.0+"
@@ -20,7 +20,7 @@ packages = [{include = "yo.py"}]
 
 [tool.poetry.dependencies]
 python = "^3.7"
-pyyaml = "^5.1"
+pyyaml = "^3.13"
 
 [tool.poetry.dev-dependencies]
 pytest = "^3.0"
