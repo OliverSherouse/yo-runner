@@ -20,7 +20,7 @@ packages = [{include = "yo.py"}]
 
 [tool.poetry.dependencies]
 python = "^3.7"
-pyyaml = "^3.13"
+pyyaml = ">=3.13"
 
 [tool.poetry.dev-dependencies]
 pytest = "^3.0"
