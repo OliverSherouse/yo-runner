@@ -91,7 +91,7 @@ html_theme = "alabaster"
 html_theme_options = {
     "github_user": "OliverSherouse",
     "github_repo": "yo-runner",
-    "description": "A YAML-based task runner for lazy people",
+    "description": "A YAML-driven task runner for lazy people",
     "github_banner": True,
     "show_relbars": True,
 }

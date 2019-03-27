@@ -1,6 +1,6 @@
-# Yo-Runner
+# Yo-runner
 
-Yo is a Yaml-based task runner for lazy people. When you're coding, you may
+Yo is a Yaml-driven task runner for lazy people. When you're coding, you may
 often need to run a long command many times, but you don't want to do all that
 typing every time. You don't want to have to remember the options or the flags
 every time. You could write a Makefile, but they're annoying. Maybe your
