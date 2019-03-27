@@ -18,7 +18,7 @@ import yaml
 from pathlib import Path
 
 log = logging.getLogger(name="yo")
-__version__ = "0.1.1.dev"
+__version__ = "0.1.1"
 
 
 def error(message):
