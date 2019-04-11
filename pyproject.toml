@@ -19,7 +19,7 @@ classifiers = [
 packages = [{include = "yo.py"}]
 
 [tool.poetry.dependencies]
-python = "^3.5"
+python = ">=3.6"
 pyyaml = ">=3.13"
 
 [tool.poetry.dev-dependencies]
