@@ -144,7 +144,9 @@ class Task(object):
         """
         cmd = self.cmd
         if args:
-            cmd = " ".join(cmd, " ".join(shlex.quote(token) for token in args))
+            cmd = " ".join(
+                [cmd, " ".join(shlex.quote(token) for token in args)]
+            )
         log.info(cmd)
         self.proc = await asyncio.create_subprocess_shell(cmd, env=self.env)
         await self.proc.wait()
@@ -253,9 +255,9 @@ def parse_args():
     parser.add_argument(
         "task_args",
         help="Additional arguments to pass to task command",
-        nargs="*",
+        nargs=argparse.REMAINDER,
     )
-    args = parser.parse_intermixed_args()
+    args = parser.parse_args()
     if not (args.list or args.task):
         parser.error("Must specify a task or --list")
     return args
@@ -282,7 +284,7 @@ def main():
     for sig in (signal.SIGTERM, signal.SIGINT, signal.SIGQUIT):
         handler = functools.partial(handle_signal, sig, task)
         loop.add_signal_handler(sig, handler)
-    loop.run_until_complete(task.run())
+    loop.run_until_complete(task.run(args.task_args))
 
 
 def dict_constructor(loader, node):
