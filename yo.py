@@ -128,7 +128,7 @@ class Task(object):
         """Terminate the task's process, if running"""
         try:
             if self.proc.returncode is None:
-                log.debug(f"Terminating {self.cmd}")
+                log.debug("Terminating {}".format(self.cmd))
                 self.proc.terminate()
         except AttributeError:
             pass
@@ -265,7 +265,7 @@ def parse_args():
 
 def handle_signal(signum, task):
     """On any signal, terminate the active task"""
-    log.debug(f"Caught {signal.Signals(signum).name}")
+    log.debug("Caught {}".format(signal.Signals(signum).name))
     task.terminate()
 
 
